@@ -45,7 +45,7 @@ def upload():
     )
 
     if not date_col or not amount_col:
-        return "CSV must contain a date and numeric amount column", 400
+         return "CSV must contain a date and numeric amount column, go to repository and download the files in the data folder to have an idea of how the csv dat/information needs to be structured, you can aslo upload these demo files on the web page", 400
 
     # ---- Clean & prepare ----
     df[date_col] = pd.to_datetime(df[date_col], errors="coerce")
@@ -133,5 +133,6 @@ def upload():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
