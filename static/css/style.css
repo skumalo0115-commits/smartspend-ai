@@ -816,7 +816,7 @@ footer {
 }
 
 .sample-download-wrapper {
-    margin-top: 16px;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
 }
@@ -836,6 +836,7 @@ footer {
     background: linear-gradient(135deg,#4f46e5,#6366f1);
     box-shadow: 0 0 0 1px rgba(99,102,241,0.4);
 }
+
 
 
 
