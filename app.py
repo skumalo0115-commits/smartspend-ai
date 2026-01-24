@@ -3,15 +3,19 @@ import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from flask import send_from_directory
+from flask import send_file
+import os
 
 app = Flask(__name__)
 
 @app.route("/download/sample-csv")
 def download_sample_csv():
-    return send_from_directory(
-        directory="data/uploads",
-        path="sample_expenses_large.csv",
-        as_attachment=True
+    file_path = os.path.join(app.root_path, "data", "uploads", "sample_expenses_large.csv")
+    return send_file(
+        file_path,
+        mimetype="text/csv",
+        as_attachment=True,
+        download_name="sample_expenses_large.csv"
     )
 
 @app.route("/")
@@ -142,6 +146,7 @@ def upload():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
