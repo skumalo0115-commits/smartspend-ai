@@ -13,7 +13,6 @@ def download_sample_csv():
     file_path = os.path.join(
         app.root_path,
         "data",
-        "uploads",
         "sample_expenses_large.csv"
     )
 
@@ -152,6 +151,7 @@ def upload():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
