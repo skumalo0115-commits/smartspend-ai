@@ -10,7 +10,13 @@ app = Flask(__name__)
 
 @app.route("/download/sample-csv")
 def download_sample_csv():
-    file_path = os.path.join(app.root_path, "data", "uploads", "sample_expenses_large.csv")
+    file_path = os.path.join(
+        app.root_path,
+        "data",
+        "uploads",
+        "sample_expenses_large.csv"
+    )
+
     return send_file(
         file_path,
         mimetype="text/csv",
@@ -146,6 +152,7 @@ def upload():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
