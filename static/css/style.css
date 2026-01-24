@@ -821,18 +821,18 @@ footer {
     margin-top: 16px;
 }
 
-#sampleCsvBtn {
-    padding: 10px 20px;
+.sample-download-btn {
+    padding: 10px 22px;
     border-radius: 999px;
     border: 1px solid rgba(255,255,255,0.15);
     background: rgba(15,23,42,0.85);
     color: #e5e7eb;
     font-size: 0.8rem;
-    cursor: pointer;
+    text-decoration: none;
     transition: all 0.25s ease;
 }
 
-#sampleCsvBtn:hover {
+.sample-download-btn:hover {
     background: linear-gradient(135deg,#4f46e5,#6366f1);
     border-color: transparent;
     transform: translateY(-1px);
